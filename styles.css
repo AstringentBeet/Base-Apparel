@@ -1,17 +1,36 @@
 body{font-family: 'Josefin Sans', Arial, Helvetica, sans-serif; background-color: #FAFAFA}
 
-@media(max-width: 600px){
+@media only screen and (max-width: 500px){
+    img.logo, img.logo--picture{width: 100px; height: 20.89px}
 
-    header.introContent {}
+    img.hero--desktop {display: none}
+    img.hero--mobile {display: block}
+
+    header.introContent {width: 311px; height: 310px}
+        h1.introContent--heading{width: 311; height: 126; font-size: 40px;}
+            span.introContent--heading_peachC {font-weight: 300; color: #CE9898}
+            span.introContent--heading_neuGrayC {font-weight: 600; color: #423A3A}
+        p.introContent--para {width: 444px; height: 84px; font-size: 14px; line-height: 22px; color: #CE9898}
+        form.email {width: 311px; height: 48px; mix-blend-mode: normal; opacity: .5; border: 1px solid #CE9898}
+            input.email--input {width: 247px; height: 46px; border: none} 
+            button.btn{width: 64px; height: 46px; position: absolute} 
+    footer{position: absolute; bottom: 0; width: 100%; height: 2.5rem}
+        
+}
+
+@media only screen and (min-width: 600px){
+    img.logo, img.logo--picture{width: 158px; height:33px}
+
+    img.hero--desktop {display: block}
+    img.hero--mobile {display: none}
+
+    header.introContent {width: 444px; height: 192px}
+    span.introContent--heading_peachC {font-weight: 300; color: #CE9898}
+    span.introContent--heading_neuGrayC {font-weight: 600; color: #423A3A}
+    p.introContent--para { width: 444px; height: 84px; line-height: 28px; color: #CE9898}
 }
 
 
-body {line-height: 64px}
 
-header.introContent {width: 444px; height: 192px}
 
-span.introContent--heading_peachC {font-weight: 300; color: #CE9898}
-span.introContent--heading_neuGrayC {font-weight: 600; color: #423A3A}
-
-p.introContent--para { width: 444px; height: 84px; line-height: 28px; color: #CE9898}
  

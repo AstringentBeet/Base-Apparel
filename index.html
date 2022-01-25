@@ -21,30 +21,36 @@
 
   <main>
 
-    <div class = "logo">
-      <img class="logo--picture" src="images/logo.svg">
-    </div>
 
-    <header class = "introContent">
-      <h1 class ="introContent--heading">
-        <span class ="introContent--heading_peachC">WE'RE</span>
-        <span class="introContent--heading_neuGrayC">COMING SOON</span>
-      </h1>
-      <p class ="introContent--para">
-        Hello fellow shoppers! We're currently building our new fashion store. 
-        Add your email below to stay up-to-date with announcements and our launch deals.
-      </p>
-        <!--Will need to add Javascript event-->
-      <form class = "email">
-        <input type = "Email" class="email--input" placeholder="Email Address">
-      </form>
-    </header>
-    
+      <section class = "logo">
+        <img class="logo--picture" src="images/logo.svg">
+      </section>
+
+      <section class ="hero">
+        <img class = "hero--desktop" src = "images/hero-desktop.jpg">
+        <img class = "hero--mobile" src = "images/hero-mobile.jpg">
+      </section>
+
+      <header class = "introContent">
+        <h1 class ="introContent--heading">
+          <span class ="introContent--heading_peachC">WE'RE</span>
+          <span class="introContent--heading_neuGrayC">COMING SOON</span>
+        </h1>
+        <p class ="introContent--para">
+          Hello fellow shoppers! We're currently building our new fashion store. 
+          Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+          <!--Will need to add Javascript event-->
+        <form class = "email" id="form1">
+          <input type = "email" class="email--input" placeholder="Email Address">
+          <button class = "btn">
+            <img src = "images/icon-arrow.svg" class = "btn--arrow">
+          </button>
+        </form>
+      </header>
+    </section>
+
   </main>
-
-  <aside class="hero">
-    <img class = "hero--desktop" src="images/hero-desktop.jpg">
-  </aside>
   
   <footer>
     <p class="attribution">
