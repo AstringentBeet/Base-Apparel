@@ -1,4 +1,12 @@
-body {line-height: 64px; font-family: 'Josefin Sans', Arial, Helvetica, sans-serif; background-color: #FAFAFA}
+body{font-family: 'Josefin Sans', Arial, Helvetica, sans-serif; background-color: #FAFAFA}
+
+@media(max-width: 600px){
+
+    header.introContent {}
+}
+
+
+body {line-height: 64px}
 
 header.introContent {width: 444px; height: 192px}
 
@@ -6,3 +14,4 @@ span.introContent--heading_peachC {font-weight: 300; color: #CE9898}
 span.introContent--heading_neuGrayC {font-weight: 600; color: #423A3A}
 
 p.introContent--para { width: 444px; height: 84px; line-height: 28px; color: #CE9898}
+ 
