@@ -63,6 +63,7 @@ body{font-family: 'Josefin Sans', Arial, Helvetica, sans-serif; background-color
 }
 
 @media only screen and (min-width: 600px){
+
     img.logo, img.logo--picture{width: 158px; height:33px}
 
     img.hero--desktop {display: block}
@@ -81,7 +82,9 @@ body{font-family: 'Josefin Sans', Arial, Helvetica, sans-serif; background-color
             color: #423A3A
         }
     p.introContent--para { width: 444px; height: 84px; line-height: 28px; color: #CE9898}
+
 }
+
 
 
 
