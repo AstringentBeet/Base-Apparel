@@ -1,66 +1,106 @@
-body{font-family: 'Josefin Sans', Arial, Helvetica, sans-serif; background-color: #FAFAFA}
+body {
+    width: 100%;
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #FAFAFA;
+    }
 
 @media only screen and (max-width: 500px){
 
-    img.logo, img.logo--picture{width: 100px; height: 20.89px}
 
-    img.hero--desktop {display: none}
-    img.hero--mobile {display: block}
+    main {
+        position: relative;
+    }
+
+
+    img.logo, img.logo--picture{
+        width: 100px;
+        height: 20.89px;
+        margin: 31px;
+    }
+
+    section.hero img.hero--desktop {display: none}
+    section.hero img.hero--mobile {margin-bottom: 64px}
+
+    img.hero--mobile, header{
+        display: block;
+        margin: 0 auto;
+    }
 
     header.introContent {
         width: 311px;
-        height: 310px
+        height: 310px;
     }
 
         h1.introContent--heading {
             width: 311;
             height: 126; 
             font-size: 40px;
+            line-height: 42px;
+            font-style: normal;
+            letter-spacing: 10.8254px;
+            text-align: center;
         }
             span.introContent--heading_peachC {
                 font-weight: 300; 
-                color: #CE9898
+                color: #CE9898;
             }
+
             span.introContent--heading_neuGrayC {
                 font-weight: 600; 
-                color: #423A3A
+                color: #423A3A;
             }
         p.introContent--para {
             width: 311px; 
             height: 88px; 
             font-size: 14px; 
             line-height: 22px; 
-            color: #CE9898
+            color: #CE9898;
+            margin-bottom: 2rem;
+            text-align: center;
         }
 
         form.email {
             width: 311px; 
             height: 48px; 
             mix-blend-mode: normal; 
-            opacity: .5; 
+            opacity: .5;
             border: 1px solid #CE9898;
             border-radius: 28px;
+            background-color: white;
         }
             input.email--input {
+                font-size: .8em;
+                margin-left: 4px;
                 width: 247px; 
                 height: 46px; 
-                border: none;
+                border-style: none;
+                border-radius: 28px;
+                color: dimgray;
             } 
                 input.email--input:focus {outline-width: 0}
 
             button.btn{
-                width: 64px; 
-                height: 46px; 
-                position: absolute;
-                background-color: #CE9898;
-                border-radius: 28px;
-            } 
+            /*removes svg border*/
+            border: none;
+            position: absolute;
+            margin-left: -5px;
+            margin-top: -1px;
+            width: 64px; 
+            height: 47px; 
+            background-color: #CE9898;
+            border-color: #CE9898;
+            border-radius: 28px;
+            }
 
     footer {
         position: absolute; 
         bottom: 0; 
         width: 100%; 
-        height: 2.5rem;
+        height: 1.2rem;
+        font-size: .5rem;
+        color: #CE9898;
+        text-align: center;
     }
         
 }
