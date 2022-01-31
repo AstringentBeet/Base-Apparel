@@ -1,11 +1,10 @@
 body {
     width: 100%;
     font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
-    font-size: 16px;
     background-color: #FAFAFA;
     }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px) {
 
 
     main {
@@ -45,7 +44,6 @@ body {
                 font-weight: 300; 
                 color: #CE9898;
             }
-
             span.introContent--heading_neuGrayC {
                 font-weight: 600; 
                 color: #423A3A;
@@ -102,6 +100,7 @@ body {
         color: #CE9898;
         text-align: center;
     }
+
         
 }
 
@@ -130,10 +129,4 @@ body {
         line-height: 28px; 
         color: #CE9898
     }
-}
-
-
-
-
-
- 
+} 
