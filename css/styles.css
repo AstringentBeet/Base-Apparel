@@ -59,7 +59,7 @@ aside.logo {
         p.introContent--para {
             width: 311px; 
             height: 88px; 
-            font-size: 14px; 
+            font-size: .875em; 
             line-height: 22px; 
             color: #CE9898;
             margin: 1rem 0 2rem 0;
