@@ -1,32 +1,39 @@
 body {
+    margin: 0;
     width: 100%;
     font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
     background-color: #FAFAFA;
     }
 
+main {
+    position: relative;
+    min-height: 700px;
+}
+
+aside.logo {
+    position: absolute;
+    margin: 0;
+}
+
+
 @media only screen and (max-width: 500px) {
 
-
-    main {
-        position: relative;
-    }
-
-
-    img.logo, img.logo--picture{
+    section.logo, img.logo--picture{
         width: 100px;
         height: 20.89px;
         margin: 31px;
     }
 
-    section.hero img.hero--desktop {display: none}
-    section.hero img.hero--mobile {margin-bottom: 64px}
+    aside.hero img.hero--desktop {display: none}
+    aside.hero img.hero--mobile {margin-bottom: 64px}
 
-    img.hero--mobile, header{
+    aside.hero--mobile, header{
         display: block;
         margin: 0 auto;
     }
 
     header.introContent {
+        border: 1px solid black;
         width: 311px;
         height: 310px;
     }
@@ -39,6 +46,7 @@ body {
             font-style: normal;
             letter-spacing: 10.8254px;
             text-align: center;
+            margin: 0;
         }
             span.introContent--heading_peachC {
                 font-weight: 300; 
@@ -54,7 +62,7 @@ body {
             font-size: 14px; 
             line-height: 22px; 
             color: #CE9898;
-            margin-bottom: 2rem;
+            margin: 1rem 0 2rem 0;
             text-align: center;
         }
 
@@ -104,11 +112,26 @@ body {
         
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 1280px) {
 
-    img.logo, img.logo--picture{width: 158px; height:33px}
+    section.logo, img.logo--picture {
+        border: 1px solid black;
+        width: 158px; 
+        height: 33px;
+        margin: 0;
+    }
 
-    img.hero--desktop {display: block}
+
+    img.hero--desktop {
+        position: relative;
+        border: 1px solid black;
+        box-sizing: border-box;
+        display: block;
+        height: auto;
+        float: right;
+        clear: left;
+    }
+
     img.hero--mobile {display: none}
 
     header.introContent {
