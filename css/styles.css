@@ -1,5 +1,4 @@
 body {
-    margin: 0;
     width: 100%;
     font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
     background-color: #FAFAFA;
@@ -10,15 +9,12 @@ main {
     min-height: 700px;
 }
 
-aside.logo {
-    position: absolute;
-    margin: 0;
-}
-
 
 @media only screen and (max-width: 500px) {
 
-    section.logo, img.logo--picture{
+    section.logo img.logo--picture {
+        border: 1px solid black;
+        position: relative;
         width: 100px;
         height: 20.89px;
         margin: 31px;
@@ -27,13 +23,15 @@ aside.logo {
     aside.hero img.hero--desktop {display: none}
     aside.hero img.hero--mobile {margin-bottom: 64px}
 
-    aside.hero--mobile, header{
+    aside.hero img.hero--mobile, header{
         display: block;
         margin: 0 auto;
+        margin-bottom: 4rem;
     }
 
     header.introContent {
         border: 1px solid black;
+        margin-top: 4rem;
         width: 311px;
         height: 310px;
     }
@@ -114,11 +112,12 @@ aside.logo {
 
 @media only screen and (min-width: 1280px) {
 
-    section.logo, img.logo--picture {
+
+   section.logo img.logo--picture {
         border: 1px solid black;
         width: 158px; 
         height: 33px;
-        margin: 0;
+        position: absolute;
     }
 
 
@@ -127,7 +126,6 @@ aside.logo {
         border: 1px solid black;
         box-sizing: border-box;
         display: block;
-        height: auto;
         float: right;
         clear: left;
     }
@@ -136,7 +134,7 @@ aside.logo {
 
     header.introContent {
         width: 444px; 
-        height: 192px
+        height: 192px;
     }
         span.introContent--heading_peachC {
             font-weight: 300; 
@@ -152,4 +150,6 @@ aside.logo {
         line-height: 28px; 
         color: #CE9898
     }
+
+
 } 

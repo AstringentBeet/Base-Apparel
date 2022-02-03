@@ -18,6 +18,17 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
+## Updates
+
+  01/31/2022, 10:57pm CDT: 
+  BEFORE YOU CONTINUE, REORGANIZE THE SEMANTIC ELEMENTS AND FIGURE OUT
+  HOW TO PROPERLY POSITION THE HERO IMAGE.
+
+  2/03/2022, 0118:
+  Removing the margins within the text.css file removed the whitespace at
+  the top of the body (when looking in the desktop screen).
+  
+
 ## Overview
 
 ### The challenge
