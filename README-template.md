@@ -18,18 +18,35 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
-## Updates
+## Updates:
 
-  01/31/2022, 10:57pm CDT: 
-  BEFORE YOU CONTINUE, REORGANIZE THE SEMANTIC ELEMENTS AND FIGURE OUT
-  HOW TO PROPERLY POSITION THE HERO IMAGE.
-
-  2/03/2022, 0118:
-  Removing the margins within the text.css file removed the whitespace at
-  the top of the body (when looking in the desktop screen).
+  - 01/31/2022, 2257 CDT:  
+  BEFORE YOU CONTINUE, REORGANIZE THE SEMANTIC ELEMENTS AND FIGURE OUT  
+    HOW TO PROPERLY POSITION THE HERO IMAGE.
   
-
+  -  2/03/2022, 0118 CDT:  
+  commenting the margins out within the text.css file removed the whitespace at the top of the body (when looking in the desktop screen).
+      - I never realized the degree of specificity involved when working solely on positions and block placement. I need to go over both CSS inheritance and specificity to better understand the more minor details that I skimmed through.
+       - Here some objectives to complete before the next commit:
+         - Create a third querey that goes beyond a landscaped width of 1280 pixels.
+          - Center both the page-content and footer (with the footer being horizontally alligned with the page-content).
+          - Find the appropriate percentages for said blocks to better the page's overall responsiveness.
+          - pretty-up the rest of the page and remove the border guides.
+          - revise the class names.
 ## Overview
+
+### Project objectives
+
+There are a few challenges that I made for myself in the process of creating this branch:  
+- I'm a stubborn dude, and in order to understand CSS fundamentals, I'm gonna focus  
+on creating the layout by altering block positions using both floats and clears.  
+  - this excludes the use of flexbox and CSS grids. Although some may not see  
+  the point in taking these extra steps, this porject serves more as an experiment  
+  that'll allow me to better understand how programmers managed to configure layouts without the convenient newer technologies we have now.
+    - on a side note, I will not be using table grids...for now.
+- By confining myself to these restrictions, I'll better understand how to manipulate the DOM from various perspectives using Javascript.
+- This also serves as practice for better understanding git and virtual control systems as a whole.
+
 
 ### The challenge
 
@@ -64,8 +81,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
-- CSS Grid
+- Floats
+- positioning
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework

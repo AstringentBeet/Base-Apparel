@@ -112,12 +112,12 @@ main {
 
 @media only screen and (min-width: 1280px) {
 
-
    section.logo img.logo--picture {
         border: 1px solid black;
         width: 158px; 
         height: 33px;
         position: absolute;
+        left: 11.45%;
     }
 
 
@@ -133,10 +133,23 @@ main {
     img.hero--mobile {display: none}
 
     header.introContent {
+        position: absolute;
         width: 444px; 
-        height: 192px;
+        height: 404px;
+        border: 1px solid black;
+        margin: 0;
+        left: 11.45%;
     }
+        h1.introContent--heading{
+            font-size: 4em;
+            line-height: 71px;;
+            font-style: normal;
+            letter-spacing: 10.8254px;
+            text-align: center;
+            margin: 0;
+        }
         span.introContent--heading_peachC {
+            font-size: 1em;
             font-weight: 300; 
             color: #CE9898
         }
@@ -151,5 +164,11 @@ main {
         color: #CE9898
     }
 
+    footer{
+        position: absolute;
+        bottom: 0;
+        left: 11.45%;
+        border: 1px solid gray;
+    }
 
 } 
