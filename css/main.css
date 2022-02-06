@@ -1,0 +1,49 @@
+body {
+    width: 100%;
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+    background-color: #FAFAFA;
+    }
+
+main {
+    position: relative;
+}
+
+span.introContent--heading_peachC {
+    font-weight: 300; 
+    color: #CE9898
+}
+span.introContent--heading_neuGrayC {
+    font-weight: 600; 
+    color: #423A3A
+}
+
+p.introContent--para{
+    color: #CE9898;
+}
+
+form.email{
+    mix-blend-mode: normal; 
+    opacity: .5;
+    border: 1px solid #CE9898;
+    border-radius: 28px;
+    background-color: white;
+}
+    input.email--input {
+        border-style: none;
+        border-radius: 28px;
+        color: dimgray;
+    }
+    input.email--input:focus {outline-width: 0}
+
+button.btn {
+    border: none;
+    position: absolute;
+    background-color: #CE9898;
+    border-radius: 28px;
+}
+
+footer {
+    position: absolute; 
+    color: #CE9898;
+    text-align: center;
+}

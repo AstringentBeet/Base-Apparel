@@ -1,0 +1,88 @@
+@media screen and (min-width: 1440px) {
+
+    main {
+        position: relative;
+        height: 100vh;
+    }
+    
+     section.logo img.logo--picture {
+         border: 1px solid black;
+         width: 158px; 
+         height: 33px;
+         position: absolute;
+         top: 7.3%;
+         left: 11.45%;
+     }
+ 
+     aside.hero {
+        position: relative;
+        height: 100vh;
+        width: auto;
+        display: block;
+        float: right;
+        clear: left;
+        text-align: center;
+        border: 1px solid black;
+     }
+    
+         img.hero--desktop {
+            /*max-height sets a limit to the actual image,
+            so it can fit in the container*/
+            vertical-align: middle;
+            max-height: 100%;
+            display: inline-block;
+            border: 1px solid red;
+         }
+         img.hero--mobile {display: none}
+ 
+     header.introContent {
+         top: 26%;
+         position: absolute;
+         width: 444px; 
+         height: 404px;
+         border: 1px solid black;
+         margin: 0;
+         left: 11.45%;
+     }
+         h1.introContent--heading{
+             border: 1px solid blue;
+             font-size: 4em;
+             line-height: 71px;
+             font-style: normal;
+             letter-spacing: 10.8254px;
+             text-align: left;
+         }
+         
+     p.introContent--para { 
+         border: 1px solid gray;
+         width: 444px;
+         height: 84px; 
+         line-height: 28px; 
+         margin: 1rem 0 2rem 0;
+        }
+ 
+     form.email {
+         width: 445px; 
+         height: 56px; 
+     }
+         input.email--input {
+             font-size: .8em;
+             width: 345px; 
+             height: 56px; 
+         } 
+ 
+         button.btn{ 
+            margin-top: -1px;
+            width: 100px; 
+            height: 56px; 
+         }
+ 
+     footer{
+         position: absolute;
+         width: 340px;
+         left: 15.06%;
+         border: 1px solid gray;
+         bottom: 0;
+     }
+ 
+ } 

@@ -4,6 +4,7 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
 
 ## Table of contents
 
+- [Updates](#Updates)
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
@@ -20,19 +21,29 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
 
 ## Updates:
 
-  - 01/31/2022, 2257 CDT:  
-  BEFORE YOU CONTINUE, REORGANIZE THE SEMANTIC ELEMENTS AND FIGURE OUT  
-    HOW TO PROPERLY POSITION THE HERO IMAGE.
+  #### 01/31/2022, 2257 CDT:  
+  Before you continue, reorganize the semantic elements and figure out how to properly position the hero image.
   
-  -  2/03/2022, 0118 CDT:  
+  #### 2/03/2022, 0354 CDT:  
   commenting the margins out within the text.css file removed the whitespace at the top of the body (when looking in the desktop screen).
-      - I never realized the degree of specificity involved when working solely on positions and block placement. I need to go over both CSS inheritance and specificity to better understand the more minor details that I skimmed through.
-       - Here some objectives to complete before the next commit:
-         - Create a third querey that goes beyond a landscaped width of 1280 pixels.
-          - Center both the page-content and footer (with the footer being horizontally alligned with the page-content).
-          - Find the appropriate percentages for said blocks to better the page's overall responsiveness.
-          - pretty-up the rest of the page and remove the border guides.
-          - revise the class names.
+  - I never realized the degree of specificity involved when working solely on positions and block placement. I need to go over both CSS inheritance and specificity to better understand the more minor details that I skimmed through.    
+
+  Here some objectives to complete before the next commit:
+   - Create a third querey that goes beyond a landscaped width of 1280 pixels.
+   - Center both the page-content and footer (with the footer being horizontally alligned with the page-content).
+   - Find the appropriate percentages for said blocks to better the page's overall responsiveness.
+   - pretty-up the rest of the page and remove the border guides.
+   - revise class names to better fit the BEM naming convention. 
+  #### 02/04/2022, Part 1/2, 1924 CDT:  
+  After scanning through various articles on the web, I was finally able to find the code to center the hero image on the desktop version of the page. In the proccess of this, relying solely on floats and block positioning has forced me to gain a better idea of certain concepts such as inheritance, the box-model, and surface-level basics of pseudo-elements (which adds an additional 'block' to the model).
+  - This is one of two planned commits for the rest of the day. The next one will actually focus on previous obejectives.
+  - ~~Turns out that adding the max-height property was the missing piece in fitting the hero image into the aside container (technically the pseudo-element), allowing it the overall picture to be vertically centered.~~
+    - ~~Figuring this out took about 7 hours an ungodly amount of time.~~   
+  - ~~There wasn't a need to set the footer's position to absolute in the mobile platform, but it was absolutely (pun-intended) needed for the desktop platform due to said tag being outside of the rest of the content. Doing so removes the footer from the flow, which places (technically) it inside the main content.~~
+  #### 02/05/2022
+  Styled the desktop page (with a width of 1440) a bit more.
+   - After realising how little I know about positioning, proper box styling, and "legacy Layouts, I'm going to dive more into CSS fundamentals. 
+
 ## Overview
 
 ### Project objectives

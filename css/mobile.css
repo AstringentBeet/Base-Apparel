@@ -1,0 +1,80 @@
+@media only screen and (max-width: 500px) {
+
+    main {
+        min-height: 800px;
+    }
+
+    section.logo img.logo--picture {
+        border: 1px solid black;
+        position: relative;
+        width: 100px;
+        height: 20.89px;
+        margin: 31px;
+    }
+
+    aside.hero img.hero--desktop {display: none}
+    aside.hero img.hero--mobile {margin-bottom: 64px}
+
+    aside.hero img.hero--mobile, header{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+    }
+
+    header.introContent {
+        border: 1px solid black;
+        margin-top: 4rem;
+        width: 311px;
+        height: 310px;
+    }
+
+        h1.introContent--heading {
+            width: 311px;
+            height: 126px; 
+            font-size: 40px;
+            line-height: 42px;
+            font-style: normal;
+            letter-spacing: 10.8254px;
+            text-align: center;
+            margin: 0;
+        }
+            
+        p.introContent--para {
+            width: 311px; 
+            height: 88px; 
+            font-size: .875em; 
+            line-height: 22px; 
+            color: #CE9898;
+            margin: 1rem 0 2rem 0;
+            text-align: center;
+        }
+
+        form.email {
+            width: 311px; 
+            height: 48px; 
+        }
+            input.email--input {
+                font-size: .8em;
+                margin-left: 4px;
+                width: 247px; 
+                height: 46px; 
+            } 
+
+            button.btn{
+            /*removes svg border*/
+            margin-left: -5px;
+            margin-top: -1px;
+            width: 64px; 
+            height: 47px; 
+            }
+
+    footer {
+        width: 100%; 
+        height: 1.2rem;
+        font-size: .5rem;
+        color: #CE9898;
+        text-align: center;
+    }
+
+        
+}
