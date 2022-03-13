@@ -1,5 +1,9 @@
 @media screen and (min-width: 1440px) {
 
+    .hero--image_mobile{
+        display: none;
+    }
+
     main {
         position: relative;
         height: 100vh;
@@ -14,25 +18,27 @@
          left: 11.45%;
      }
  
-     aside.hero {
+     .hero{
         position: relative;
         height: 100vh;
         width: auto;
-        display: block;
+        display: table;
         float: right;
         clear: left;
         text-align: center;
-        border: 1px solid black;
      }
     
-         img.hero--desktop {
+         .hero--image {
             /*max-height sets a limit to the actual image,
             so it can fit in the container*/
+            display: table-cell;
             vertical-align: middle;
-            max-height: 100%;
-            display: inline-block;
-            border: 1px solid red;
+            text-align: center;
          }
+
+            .hero--image_desktop {
+                max-height: 800px;
+            }
          img.hero--mobile {display: none}
  
      header.introContent {
@@ -44,7 +50,7 @@
          margin: 0;
          left: 11.45%;
      }
-         h1.introContent--heading{
+         h1.introContent--heading {
              border: 1px solid blue;
              font-size: 4em;
              line-height: 71px;

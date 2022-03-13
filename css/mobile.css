@@ -12,10 +12,10 @@
         margin: 31px;
     }
 
-    aside.hero img.hero--desktop {display: none}
-    aside.hero img.hero--mobile {margin-bottom: 64px}
+    .hero--image_desktop {display: none}
+    .hero--image_mobile {margin-bottom: 64px}
 
-    aside.hero img.hero--mobile, header{
+    aside.hero .hero--image_mobile, header{
         display: block;
         margin: 0 auto;
         margin-bottom: 4rem;
