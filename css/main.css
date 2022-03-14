@@ -33,7 +33,10 @@ form.email{
         border-radius: 28px;
         color: dimgray;
     }
-    input.email--input:focus {outline-width: 0}
+    input.email--input:focus {
+        outline-width: 0;
+        outline: none;
+    }
 
 button.btn {
     border: none;
