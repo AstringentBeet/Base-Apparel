@@ -1,11 +1,12 @@
 @media only screen and (max-width: 500px) {
 
+    .bg-pattern {display: none}
+
     main {
         min-height: 800px;
     }
 
     section.logo img.logo--picture {
-        border: 1px solid black;
         position: relative;
         width: 100px;
         height: 20.89px;
@@ -22,7 +23,6 @@
     }
 
     header.introContent {
-        border: 1px solid black;
         margin-top: 4rem;
         width: 311px;
         height: 310px;
@@ -56,13 +56,14 @@
             input.email--input {
                 font-size: .8em;
                 margin-left: 4px;
-                width: 247px; 
+                padding-left: 15px;
+                width: 238px; 
                 height: 46px; 
             } 
 
             button.btn{
             /*removes svg border*/
-            margin-left: -5px;
+            margin-left: 9px;
             margin-top: -1px;
             width: 64px; 
             height: 47px; 
@@ -77,4 +78,54 @@
     }
 
         
+}
+
+@media only screen and (max-width: 240px) {
+ 
+    header.introContent {
+        margin-top: 4rem;
+        width: 210px;
+        height: 360px;
+    }
+
+        h1.introContent--heading {
+            width: 210px;
+            height: 126px; 
+            font-size: 40px;
+            line-height: 42px;
+            font-style: normal;
+            letter-spacing: 4.8254px;
+            text-align: center;
+            margin: 0;
+        }
+            
+        p.introContent--para {
+            width: 210px; 
+            height: 88px; 
+            font-size: .875em; 
+            line-height: 22px; 
+            color: #CE9898;
+            margin: 1rem 0 5rem 0;
+            text-align: center;
+        }
+
+        form.email {
+            width: 210px; 
+            height: 48px; 
+        }
+            input.email--input {
+                font-size: .8em;
+                margin-left: 4px;
+                width: 183px; 
+                height: 46px; 
+            } 
+
+            button.btn{
+            /*removes svg border*/
+            margin-left: -42px;
+            margin-top: -1px;
+            width: 64px; 
+            height: 47px; 
+            }
+
 }

@@ -1,7 +1,9 @@
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
 
-    .hero--image_mobile{
-        display: none;
+    .bg-pattern {
+        position: absolute;
+        max-width: 54.34375%;        
+        height: 100vh;
     }
 
     main {
@@ -10,7 +12,6 @@
     }
     
      section.logo img.logo--picture {
-         border: 1px solid black;
          width: 158px; 
          height: 33px;
          position: absolute;
@@ -18,14 +19,13 @@
          left: 11.45%;
      }
  
-     .hero{
+     .hero {
         position: relative;
         height: 100vh;
-        width: auto;
         display: table;
         float: right;
         clear: left;
-        text-align: center;
+        vertical-align: middle;
      }
     
          .hero--image {
@@ -37,21 +37,21 @@
          }
 
             .hero--image_desktop {
+                height: 788px;
                 max-height: 800px;
+                margin-bottom: -6.6px;
             }
-         img.hero--mobile {display: none}
+            .hero--image_mobile {display: none}
  
      header.introContent {
          top: 26%;
          position: absolute;
          width: 444px; 
          height: 404px;
-         border: 1px solid black;
          margin: 0;
          left: 11.45%;
      }
          h1.introContent--heading {
-             border: 1px solid blue;
              font-size: 4em;
              line-height: 71px;
              font-style: normal;
@@ -60,7 +60,6 @@
          }
          
      p.introContent--para { 
-         border: 1px solid gray;
          width: 444px;
          height: 84px; 
          line-height: 28px; 
@@ -74,7 +73,8 @@
          input.email--input {
              font-size: .8em;
              width: 345px; 
-             height: 56px; 
+             height: 54px; 
+             padding-left: 25px;
          } 
  
          button.btn{ 
@@ -84,11 +84,16 @@
          }
  
      footer{
-         position: absolute;
          width: 340px;
          left: 15.06%;
-         border: 1px solid gray;
          bottom: 0;
      }
  
  } 
+
+ @media screen and (min-width: 1440px) {
+
+    .bg-pattern {
+        max-width: 58.34375%;
+    }
+ }
