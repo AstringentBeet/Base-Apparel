@@ -44,6 +44,14 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
   Styled the desktop page (with a width of 1440) a bit more.
    - After realising how little I know about positioning, proper box styling, and "legacy Layouts, I'm going to dive more into CSS fundamentals. 
 
+   #### 03/15/2022
+   It's been well over a month of trying to figure out how to position certain objects (specifically centering the hero image) without the aid of table displays, legacy grids (such as 960), flexbox, and CSS grids. Obviously, it didn't pan out well. How did developers go about positioning just using floats and clears? 
+   - Decided to apply the table display to the hero image by wrapping it within two containers, allowing me to vertically center it without the need to lose hair about it. 
+   - Removed the border "guides" and completed the basic design for both mobile and desktop. 
+   - Added the gradient SVG background.
+     - Unsure if it should be a background image using CSS. With that, the SVG is awkward due to the pattern abruptly stopping. I need to learn how to use gradients with CSS. 
+     - Now I just need to apply Javascript.
+
 ## Overview
 
 ### Project objectives
