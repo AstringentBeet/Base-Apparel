@@ -2,7 +2,7 @@
 
     .bg-pattern {
         position: absolute;
-        max-width: 54.34375%;        
+        width: 54.34375%;        
         height: 100vh;
     }
 
@@ -94,6 +94,6 @@
  @media screen and (min-width: 1440px) {
 
     .bg-pattern {
-        max-width: 58.34375%;
+        width: 59.34375%;
     }
  }
