@@ -52,6 +52,14 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
      - Unsure if it should be a background image using CSS. With that, the SVG is awkward due to the pattern abruptly stopping. I need to learn how to use gradients with CSS. 
      - Now I just need to apply Javascript.
 
+  #### 03/23/2022
+  Applying a gradient transition was a bit tricky since CSS doesn't have a mehtodology to directly deal with that. As a result, and after some digging on the web, applying a transition to a gradient could only be achieved by transition an element's (and it's subsequent pseudo-element) opacity to what it was (::)before. The next step is to create an error message within the body (in contrast to the common alert function) using AJAX and Regex. Sure, it's much easier utilizing JQuery for something such as this, but I need to understand how to apply this knowing my code with confidence.
+  - changed `background-color` to `background-image` in order to utilize gradient transition.
+    - the button color would have changed abrutly without smooth animation if I were to use `background-color` instead.
+  - Created a `::before` pseudo-element for my `.btn` class in order to have both elements.
+  - changed CSS color values to RGB and RGBA due to HSL not supporting the specific color I needed for the button.
+  - Applying AJAX to both spot and inform the client of their error (invalid email) directly below the input field using a fade-in animation. The input's border should also transition with an equal speed and smoothness as the message and button. This border, message, and button, will disspear once it validates the client's email, meaning that it'll make use of recognizing a wide variety of Regular Expressions. 
+
 ## Overview
 
 ### Project objectives
