@@ -4,7 +4,7 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
 
 ## Table of contents
 
-- [Updates](#Updates)
+- [Progress-Log](#Progress-Log)
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
@@ -19,7 +19,7 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
-## Updates:
+## Progress-Log:
 
   #### 01/31/2022, 2257 CDT:  
   Before you continue, reorganize the semantic elements and figure out how to properly position the hero image.
