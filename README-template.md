@@ -58,7 +58,7 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
     - the button color would have changed abrutly without smooth animation if I were to use `background-color` instead.
   - Created a `::before` pseudo-element for my `.btn` class in order to have both elements.
   - changed CSS color values to RGB and RGBA due to HSL not supporting the specific color I needed for the button.
-  - Applying AJAX to both spot and inform the client of their error (invalid email) directly below the input field using a fade-in animation. The input's border should also transition with an equal speed and smoothness as the message and button. This border, message, and button, will disspear once it validates the client's email, meaning that it'll make use of recognizing a wide variety of Regular Expressions. 
+  - Applying AJAX to both detect and inform the client if they made an error (invalid email) directly below the input field using a transitionary fade-in animation. The input's border should also transition with an equal speed and smoothness as the message and button. This border, message, and button, will disspear once it the client's email is validated, meaning that it'll make use of recognizing a wide variety of Regular Expressions. 
 
 ## Overview
 
@@ -70,7 +70,7 @@ on creating the layout by altering block positions using both floats and clears.
   - this excludes the use of flexbox and CSS grids. Although some may not see  
   the point in taking these extra steps, this porject serves more as an experiment  
   that'll allow me to better understand how programmers managed to configure layouts without the convenient newer technologies we have now.
-    - on a side note, I will not be using table grids...for now.
+    - on a side note, I will ~not~ be using table grids...for now.
 - By confining myself to these restrictions, I'll better understand how to manipulate the DOM from various perspectives using Javascript.
 - This also serves as practice for better understanding git and virtual control systems as a whole.
 
