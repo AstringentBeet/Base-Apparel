@@ -56,17 +56,27 @@
             input.email--input {
                 font-size: .8em;
                 margin-left: 4px;
-                padding-left: 15px;
-                width: 238px; 
-                height: 46px; 
+                padding-left: 10px;
+                width: 208px; 
+                height: 44px; 
             } 
+
+            .icon-error{
+                margin-right: 15px;
+            }
 
             button.btn{
             /*removes svg border*/
-            margin-left: 9px;
+            margin-left: 33px;
             margin-top: -1px;
             width: 64px; 
-            height: 47px; 
+            height: 48px; 
+            }
+
+            .validate-email{
+                font-size: .8em;
+                margin-top: 12px;
+                padding-left: 15px;
             }
 
     footer {
@@ -117,7 +127,7 @@
                 font-size: .8em;
                 margin-left: 4px;
                 width: 183px; 
-                height: 46px; 
+                height: 44px; 
             } 
 
             button.btn{

@@ -7,7 +7,9 @@ let args = change.forEach(function(e) {
     window.addEventListener(e)
 });
 
-function validEmail (sel, evt)
+function validEmail (sel, evt) {
+  
+}
 
 /*var patt = /[a-z0-9._%+-]+@[a-z0-9.]+\.[a-z]{2,3}$/
 

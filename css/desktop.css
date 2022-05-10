@@ -67,20 +67,35 @@
         }
  
      form.email {
-         width: 445px; 
-         height: 56px; 
+        border-radius: 28px;
+        width: 445px; 
+        height: 56px; 
      }
          input.email--input {
+             margin-left: 5px;
              font-size: .8em;
-             width: 345px; 
-             height: 54px; 
-             padding-left: 25px;
+             width: 310px; 
+             height: 52px; 
+             padding-left: 20px;
          } 
+
+         .icon-error{
+             margin-right: 30px;
+         }
  
          button.btn{ 
+            /*value is -2px once border is set to 2px.*/
             margin-top: -1px;
+            margin-left: 30px;
             width: 100px; 
             height: 56px; 
+         }
+
+         .validate-email{
+             margin-top: 12px;
+             font-weight: 400;
+             font-size: .8em;
+             padding-left: 30px;
          }
  
      footer{
