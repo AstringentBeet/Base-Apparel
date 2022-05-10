@@ -68,7 +68,6 @@
             button.btn{
             /*removes svg border*/
             margin-left: 33px;
-            margin-top: -1px;
             width: 64px; 
             height: 48px; 
             }

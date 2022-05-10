@@ -52,6 +52,8 @@ form.email{
 }
 
 .btn {
+    /*value is -2px once border is set to 2px. -1px if border is 1px*/
+    margin-top: -2px;
     position: absolute;
     border: none;
     border-radius: 28px;
