@@ -30,7 +30,7 @@ form.email{
 }
     input.email--input {
         border-style: none;
-        /*margin-top set to .5px of border is set to 2px*/
+        /*margin-top set to .5px of border is set to 2px; 1px if border is 1px*/
         margin-top: 1px;
         border-radius: 28px;
         color: rgba(105, 105, 105, .5);
