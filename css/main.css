@@ -21,10 +21,9 @@ p.introContent--para{
     color: rgb(206, 152, 152);
 }
 
-form.email{
+.email{
     mix-blend-mode: normal; 
-    /*border: 1px solid rgba(206, 152, 152, .5);*/
-    border: 2px solid rgb(249, 100, 100);
+    border: 1px solid rgba(206, 152, 152, .5);
     border-radius: 28px;
     background-color: rgba(255, 255, 255, .5);
 }
@@ -45,6 +44,7 @@ form.email{
 }
 
 .icon-error {
+    transition: ease .3s;
     display: none;
     color:rgb(249, 100, 100);
     position: absolute;
@@ -91,10 +91,16 @@ form.email{
         opacity: 1;
     }
 
-.error-text{
+.validity-text{
+    transition: ease 1s;
+    display: none;
     padding-left: 20px;
     margin-right: 50px;
-    color: #F96464;
+}
+
+.validity-text--error{
+    transition: ease 1s;
+    border: 2px solid rgb(249, 100, 100);
 }
 
 footer {

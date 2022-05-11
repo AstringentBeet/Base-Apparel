@@ -21,6 +21,9 @@
     <link rel ="stylesheet" href="css/main.css">
     <link rel ="stylesheet" href="css/mobile.css">
     <link rel ="stylesheet" href="css/desktop.css">
+
+    <!--Javascript-->
+
   </head>
 
   <body>
@@ -50,14 +53,14 @@
           Add your email below to stay up-to-date with announcements and our launch deals.
         </p>
           <!--Will need to add Javascript event-->
-        <form class = "email">
+        <div class = "email">
           <input type = "email" class="email--input" placeholder="Email Address">
           <img src = "images/icon-error.svg" class = "icon-error">
-          <button class = "btn">
+          <button class = "btn" id = "btn">
             <img src = "images/icon-arrow.svg" class = "btn--arrow">
           </button>
-          <p class = "error-text">Please provide a valid email.</p>
-        </form>
+          <p class = "validity-text"></p>
+        </div>
       </header>
 
     </main> 
@@ -70,5 +73,5 @@
     </footer>
 
   </body>
-
+  <script src = "script.js"></script>
 </html>

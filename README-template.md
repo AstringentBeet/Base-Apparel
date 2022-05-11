@@ -74,6 +74,29 @@ Remember:
 - `margin-top` for `input.email--input` is set to -.5px if border is set to 2px; it will be -1px if border is 1px.
 - `margin-top` for `.btn` is set to -2px once border is set to 2px. -1px if border is 1px.
 
+#### 05/11/2022; 1556
+I tested out an algorithm that I found through doing some digging on Github. One of which was
+```js
+function init (){
+  submit.addEventListener('click', function() {
+    if(!reg.test(input.value.toLowerCase())){
+      formBorder.style.border = "2px solid rgb(249, 100, 100)";
+      iconError.style.disply = "inline-block";
+      errorText.style.display = "inline-block";
+    } else {
+      formBorder.style.border = "1 px solid green";
+      errorText.innerHTML = "Email Sent!";
+      errorText.style.color = "green";
+      iconError.style.display = "none";
+    }
+    input.value = "";  
+  })
+}
+```
+Of course, this code was partially edited to work for my page. The now resolved issue that stemmed from working hrough this was involving the HTML. Although the email input's border changed color and stroke, the page immediately reoladed, completely going back to it's default appearance. The issue started due to my use of a form tag, which is, what I now know, used to send and recieve data from a server. replacing `<form>` with a regular `<div>` tag worked solely for testing out if the code entered worked.
+&nbsp;&nbsp;&nbsp;&nbsp;On another note, it would be better to turn those conditional statements into a function for reuse. If the user is to click on the button multiple times after the invalid email is correct, the border will remain in the same state it was when it initially changed.
+![Error message](images/ver1.png)
+![Error message 2](images/ver2.png)
 ## Overview
 
 ### Project objectives
