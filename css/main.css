@@ -45,6 +45,7 @@ form.email{
 }
 
 .icon-error {
+    display: none;
     color:rgb(249, 100, 100);
     position: absolute;
 }
@@ -90,7 +91,7 @@ form.email{
         opacity: 1;
     }
 
-.validate-email{
+.error-text{
     padding-left: 20px;
     margin-right: 50px;
     color: #F96464;

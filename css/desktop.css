@@ -91,7 +91,7 @@
             height: 56px; 
          }
 
-         .validate-email{
+         .error-text{
              margin-top: 12px;
              font-weight: 400;
              font-size: .8em;

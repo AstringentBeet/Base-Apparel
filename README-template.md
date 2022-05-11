@@ -64,7 +64,16 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
 
 #### 05/09/2022
 After trying to understand the reason why all the elements within the form tag looked softer in contrast to the original Figma file, it occured to me (I should also give credit to Stackoverflow for assistance) that all the child selectors within the `<form>` tag had an opacity of .5, which naturally made every single element, even SVG files, susceptible to deviating away from their assigned color. To resolve this, removing the opacity property from the form selector and replacing the color value from RGB to RGBA for all child selectors removed te issue completely.
-&nbsp;&nbsp;&nbsp;&nbsp;I began adding the error shading, but I need to utilize Javascript to form CSS transitions based on Regex.
+&nbsp;&nbsp;&nbsp;&nbsp;I began adding the error shading, but I need to utilize Javascript to form CSS transitions based on Regex. As it turns out, this doesn't require AJAX.
+
+#### 05/10/2022
+Remember:
+- The regular border for `form.email` is `border: 1px solid rgba(206, 152, 152, .5);`
+  - Once an invalid address is entered, the border is `border: 2px solid rgb(249, 100, 100);`
+  - `icon-error` has a defaulted display of none, except when the address is invalid.
+- `margin-top` for `input.email--input` is set to -.5px if border is set to 2px; it will be -1px if border is 1px.
+- `margin-top` for `.btn` is set to -2px once border is set to 2px. -1px if border is 1px.
+
 ## Overview
 
 ### Project objectives
