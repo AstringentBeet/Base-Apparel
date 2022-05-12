@@ -80,23 +80,28 @@ I tested out an algorithm that I found through doing some digging on Github. One
 function init (){
   submit.addEventListener('click', function() {
     if(!reg.test(input.value.toLowerCase())){
+      formBorder.style.transition="all 1s ease"
       formBorder.style.border = "2px solid rgb(249, 100, 100)";
-      iconError.style.disply = "inline-block";
-      errorText.style.display = "inline-block";
-    } else {
-      formBorder.style.border = "1 px solid green";
-      errorText.innerHTML = "Email Sent!";
-      errorText.style.color = "green";
+      iconError.style.transition = "color ease-in-out 1s"
+      iconError.style.display = "inline-block";
+      validityText.style.color = "rgb(249, 100, 100)";
+      validityText.style.transition = "ease 1s";
+      validityText.style.display = "inline-block";
+      validityText.innerHTML = "Please provide a valid email.";
+    } else{
+      formBorder.style.transition="all 1s ease"
+      formBorder.style.border = "1px solid green";
+      validityText.style.transition = "color ease-in-out 1s";
+      validityText.innerHTML = "Email Sent!";
+      validityText.style.color = "green";
       iconError.style.display = "none";
     }
-    input.value = "";  
   })
 }
+init();
 ```
 Of course, this code was partially edited to work for my page. The now resolved issue that stemmed from working hrough this was involving the HTML. Although the email input's border changed color and stroke, the page immediately reoladed, completely going back to it's default appearance. The issue started due to my use of a form tag, which is, what I now know, used to send and recieve data from a server. replacing `<form>` with a regular `<div>` tag worked solely for testing out if the code entered worked.
-&nbsp;&nbsp;&nbsp;&nbsp;On another note, it would be better to turn those conditional statements into a function for reuse. If the user is to click on the button multiple times after the invalid email is correct, the border will remain in the same state it was when it initially changed.
-![Error message](images/ver1.png)
-![Error message 2](images/ver2.png)
+&nbsp;&nbsp;&nbsp;&nbsp;On another note, text transitions utilizing Javascript is much more cumbersome than it's seemingly worth. At least in the moment, it is.
 ## Overview
 
 ### Project objectives

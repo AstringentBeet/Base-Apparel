@@ -13,21 +13,34 @@ const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[
 function init (){
   submit.addEventListener('click', function() {
     if(!reg.test(input.value.toLowerCase())){
-      formBorder.style.transition="border-color 1s ease"
+
+      formBorder.style.transition="border 1s ease"
       formBorder.style.border = "2px solid rgb(249, 100, 100)";
+
       iconError.style.transition = "ease 1s"
       iconError.style.display = "inline-block";
+
+      submit.style.marginTop="-2px";
+
       validityText.style.color = "rgb(249, 100, 100)";
       validityText.style.transition = "ease 1s";
       validityText.style.display = "inline-block";
       validityText.innerHTML = "Please provide a valid email.";
+
     } else {
+
       formBorder.style.transition="border-color 1s ease"
-      formBorder.style.border = "1px solid green";
+      formBorder.style.border = "1px solid #9cc58a";
+
+      submit.style.marginTop="-1px";
+
       validityText.style.transition = "ease 1s";
       validityText.innerHTML = "Email Sent!";
-      validityText.style.color = "green";
+      validityText.style.color = "#9cc58a";
+
+      iconError.style.transition="ease 1s";
       iconError.style.display = "none";
+
     }
   })
 }
@@ -45,6 +58,10 @@ init();
     iconError.style.display = "none";
   }
   input.value = "";
-};*/
+};
 
-/*multiEventListener(input, 'keyup change, paste, cut', emailValid());*/
+function multiEventListener(el, s, fn) {
+  s.split(' ').forEach(e => el.addEventListener(e, fn, false));
+}
+
+multiEventListener(input, 'keyup change, paste, cut', emailValid());*/

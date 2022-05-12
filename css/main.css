@@ -1,4 +1,4 @@
-body {
+ body {
     width: 100%;
     font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
     background-color: rgb(250, 250, 250);
@@ -21,12 +21,18 @@ p.introContent--para{
     color: rgb(206, 152, 152);
 }
 
-.email{
-    mix-blend-mode: normal; 
+div.email{
     border: 1px solid rgba(206, 152, 152, .5);
     border-radius: 28px;
     background-color: rgba(255, 255, 255, .5);
+    transition: border 1s ease-out;
 }
+    div.email--error{
+        border: 2px solid rgb(249, 100, 100);
+        border-radius: 28px;
+        background-color: rgba(255, 255, 255, .5);
+        transition: ease-out 1s;
+    }
     input.email--input {
         border-style: none;
         /*margin-top set to -.5px of border is set to 2px; -1px if border is 1px*/
@@ -37,11 +43,6 @@ p.introContent--para{
         outline-width: 0;
         outline: none;
     }
-.email--input_error{
-    border-style: none;
-    border-radius: 28px;
-    color: rgba(249, 100, 100, .5);
-}
 
 .icon-error {
     transition: ease .3s;
