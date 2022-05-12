@@ -6,10 +6,6 @@ const validityText = document.querySelector(".validity-text");
 
 const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-/*function multiEventListener(el, ls, fn){
-  ls.split('').forEach(e => el.addEventListener(e, fn, false));
-}*/
-
 function init (){
   submit.addEventListener('click', function() {
     if(!reg.test(input.value.toLowerCase())){
@@ -23,7 +19,7 @@ function init (){
       submit.style.marginTop="-2px";
 
       validityText.style.color = "rgb(249, 100, 100)";
-      validityText.style.transition = "ease 1s";
+      validityText.style.transition = "1s ease-in-out";
       validityText.style.display = "inline-block";
       validityText.innerHTML = "Please provide a valid email.";
 
@@ -34,34 +30,20 @@ function init (){
 
       submit.style.marginTop="-1px";
 
+      iconError.style.transition="1s ease-in-out";
+      iconError.style.display = "none";
+
       validityText.style.transition = "ease 1s";
       validityText.innerHTML = "Email Sent!";
       validityText.style.color = "#9cc58a";
-
-      iconError.style.transition="ease 1s";
-      iconError.style.display = "none";
 
     }
   })
 }
 init();
 
-/*function emailValid(){
-  if(!reg.test(input.value.toLowerCase())){
-    formBorder.style.border = "2px solid rgb(249, 100, 100)";
-    iconError.style.disply = "inline-block";
-    errorText.style.display = "inline-block";
-  } else {
-    formBorder.style.border = "1 px solid green"
-    errorText.innerHTML = "Email Sent!";
-    errorText.style.color = "green";
-    iconError.style.display = "none";
-  }
-  input.value = "";
-};
-
-function multiEventListener(el, s, fn) {
-  s.split(' ').forEach(e => el.addEventListener(e, fn, false));
+/*function multiEventListener(el, ls, fn){
+  ls.split('').forEach(e => el.addEventListener(e, fn, false));
 }
 
-multiEventListener(input, 'keyup change, paste, cut', emailValid());*/
+multiEventListener(input, 'keyup change paste cut', );*/
