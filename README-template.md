@@ -102,6 +102,7 @@ init();
 ```
 Of course, this code was partially edited to work for my page. The now resolved issue that stemmed from working hrough this was involving the HTML. Although the email input's border changed color and stroke, the page immediately reoladed, completely going back to it's default appearance. The issue started due to my use of a form tag, which is, what I now know, used to send and recieve data from a server. replacing `<form>` with a regular `<div>` tag worked solely for testing out if the code entered worked.
 &nbsp;&nbsp;&nbsp;&nbsp;On another note, text transitions utilizing Javascript is much more cumbersome than it's seemingly worth. At least in the moment, it is.
+- remember to add a transformation for the div border. The color has a smooth transition, but the partial incrememnt in size just looks clunky.
 ## Overview
 
 ### Project objectives
