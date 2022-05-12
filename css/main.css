@@ -27,12 +27,6 @@ div.email{
     background-color: rgba(255, 255, 255, .5);
     transition: border 1s ease-out;
 }
-    div.email--error{
-        border: 2px solid rgb(249, 100, 100);
-        border-radius: 28px;
-        background-color: rgba(255, 255, 255, .5);
-        transition: ease-out 1s;
-    }
     input.email--input {
         border-style: none;
         /*margin-top set to -.5px of border is set to 2px; -1px if border is 1px*/
@@ -45,7 +39,6 @@ div.email{
     }
 
 .icon-error {
-    transition: ease .3s;
     display: none;
     color:rgb(249, 100, 100);
     position: absolute;
@@ -99,10 +92,6 @@ div.email{
     margin-right: 50px;
 }
 
-.validity-text--error{
-    transition: ease 1s;
-    border: 2px solid rgb(249, 100, 100);
-}
 
 footer {
     position: absolute; 
