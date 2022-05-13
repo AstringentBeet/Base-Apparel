@@ -103,3 +103,13 @@ footer {
     color: rgb(206, 152, 152);
     text-align: center;
 }
+
+a.link:link{
+    color: rgb(206, 152, 152);
+    text-decoration: none;
+}
+
+a.link:visited{
+    color: #967bb6;
+    text-decoration: none;
+}

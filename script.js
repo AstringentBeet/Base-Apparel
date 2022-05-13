@@ -6,7 +6,7 @@ const validityText = document.querySelector(".validity-text");
 
 const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-function init (){
+function inIt (){
   submit.addEventListener('click', function() {
     if(!reg.test(input.value.toLowerCase())){
 
@@ -42,8 +42,16 @@ function init (){
 }
 init();
 
-/*function multiEventListener(el, ls, fn){
-  ls.split('').forEach(e => el.addEventListener(e, fn, false));
-}
+/*
+document.querySelector('#txtSearch').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      // code for enter
+    }
+});
 
-multiEventListener(input, 'keyup change paste cut', );*/
+function multiEventListener(el, ls, fn() {
+  ls.split('').forEach(e => el.addEventListener(e, fn, false));
+});
+
+multiEventListener(input, 'keyup keypress change paste cut', inIt);
+*/

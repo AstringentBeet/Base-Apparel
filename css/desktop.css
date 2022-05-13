@@ -99,9 +99,10 @@
          }
 
      footer{
-         width: 400px;
-         left: 13.06%;
-         bottom: 0;
+        font-size: .8em;
+        width: 400px;
+        left: 13.06%;
+        bottom: 0;
      }
  
  } 

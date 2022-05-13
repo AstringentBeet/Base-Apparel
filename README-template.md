@@ -49,10 +49,10 @@
      - Now I just need to apply Javascript.
 
   #### 03/23/2022
-  Applying a gradient transition was a bit tricky since CSS doesn't have a mehtodology to directly deal with that. As a result, and after some digging on the web, applying a transition to a gradient could only be achieved by transition an element's (and it's subsequent pseudo-element) opacity to what it was (::)before. The next step is to create an error message within the body (in contrast to the common alert function) using AJAX and Regex. Sure, it's much easier utilizing JQuery for something such as this, but I need to understand how to apply this knowing my code with confidence.
+  Applying a gradient transition was a bit tricky since CSS doesn't have a mehtodology to directly deal with that. As a result, and after some digging on the web, applying a transition to a gradient could only be achieved by transitioning an element's (and it's subsequent pseudo-element) opacity to what it was `::before`. The next step is to create an error message within the body (in contrast to the common alert function) using AJAX and Regex. Sure, it's much easier utilizing JQuery for something such as this, but I need to understand how to apply this knowing my code with confidence.
   - changed `background-color` to `background-image` in order to utilize gradient transition.
     - the button color would have changed abrutly without smooth animation if I were to use `background-color` instead.
-  - Created a `::before` pseudo-element for my `.btn` class in order to have both elements.
+  - Created a `::before` pseudo-element for my `.btn` class in order to have both elements change color smoothly.
   - changed CSS color values to RGB and RGBA due to HSL not supporting the specific color I needed for the button.
   - Applying AJAX to both detect and inform the client if they made an error (invalid email) directly below the input field using a transitionary fade-in animation. The input's border should also transition with an equal speed and smoothness as the message and button. This border, message, and button, will disspear once it the client's email is validated, meaning that it'll make use of recognizing a wide variety of Regular Expressions. 
 
@@ -101,6 +101,11 @@ Of course, this code was partially edited to work for my page. The now resolved 
 
 #### 05/12/2022; 1415
 I need to create a two functions – one for creating a smooth display transition for the icon-error, the other for a resize transition for border size and button's margin alteration. This project has taken a lot longer than I would have wanted it to go, but I guess it's a part of the learning process. I'm starting to appreciate the use of libraries and frameworks.
+
+#### 05/12/2022; 1833
+I'll go ahead and claim this project as completed, but only in terms of accomplishing all of the required tasks. I still intend to update this little page, but on my own terms. It was a tedious as it was educational and enjoyable, and I hope to have the next major update completed by next Thursday.
+
+
 ## Overview
 
 ### Project objectives
@@ -127,9 +132,12 @@ Users should be able to:
   - The email address is not formatted correctly
 - Recieve a success message when the email is entered correctly.
   - Both messages should have a smooth transition. This includes a color change in the
-  `form` (which is now a `<div>` tag) border, and  
+  `form` (which is now a `<div>` tag) border, and the display for the error-icon svg (CSS's tranisition property doesn't work for display, so I'll be using Javascript in conjuction with a hiiden CSS class).
 
 ### Screenshot
+
+![invalid email entered:](images/ver1.png)
+![Valid email entered:](images/ver2.png)
 
 ### Links
 
@@ -150,6 +158,7 @@ Users should be able to:
 - [Styled Components](https://styled-components.com/) - For styles
 
 ### What I learned
+The uber-tedious process of applying transition animations to buttons.
 
 ### Continued development
 
