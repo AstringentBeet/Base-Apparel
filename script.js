@@ -6,7 +6,7 @@ const validityText = document.querySelector(".validity-text");
 
 const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-function inIt (){
+function validate (){
   submit.addEventListener('click', function() {
     if(!reg.test(input.value.toLowerCase())){
 
@@ -40,7 +40,7 @@ function inIt (){
     }
   })
 }
-init();
+validate();
 
 /*
 document.querySelector('#txtSearch').addEventListener('keypress', function (e) {

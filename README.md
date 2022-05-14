@@ -141,8 +141,8 @@ Users should be able to:
 
 ### Links
 I'll need to update this link once I have my website running.
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github page](https://github.com/AstringentBeet/Base-Apparel/tree/pages)
+- Live Site URL: [Live site](https://astringentbeet.github.io/Base-Apparel/)
 
 ## My process
 
