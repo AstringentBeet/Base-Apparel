@@ -1,95 +1,170 @@
-# Frontend Mentor - Base Apparel coming soon page
+# Base Apparel 
 
-![Design preview for the Base Apparel coming soon page coding challenge](./design/desktop-preview.jpg)
+## Table of contents
 
-## Welcome! 👋
+- [Progress Log](#Progress-Log)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-Thanks for checking out this front-end coding challenge.
+## Progress-Log:
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+  #### 01/31/2022, 2257 CDT:  
+  Before you continue, reorganize the semantic elements and figure out how to properly position the hero image.
+  
+  #### 2/03/2022, 0354 CDT:  
+  commenting the margins out within the text.css file removed the whitespace at the top of the body (when looking in the desktop screen).
+  - I never realized the degree of specificity involved when working solely on positions and block placement. I need to go over both CSS inheritance and specificity to better understand the more minor details that I skimmed through.    
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+  Here some objectives to complete before the next commit:
+   - Create a third querey that goes beyond a landscaped width of 1280 pixels.
+   - Center both the page-content and footer (with the footer being horizontally alligned with the page-content).
+   - Find the appropriate percentages for said blocks to better the page's overall responsiveness.
+   - pretty-up the rest of the page and remove the border guides.
+   - revise class names to better fit the BEM naming convention. 
+  #### 02/04/2022, Part 1/2, 1924 CDT:  
+  After scanning through various articles on the web, I was finally able to find the code to center the hero image on the desktop version of the page. In the proccess of this, relying solely on floats and block positioning has forced me to gain a better idea of certain concepts such as inheritance, the box-model, and surface-level basics of pseudo-elements (which adds an additional 'block' to the model).
+  - This is one of two planned commits for the rest of the day. The next one will actually focus on previous obejectives.
+  - ~~Turns out that adding the max-height property was the missing piece in fitting the hero image into the aside container (technically the pseudo-element), allowing it the overall picture to be vertically centered.~~
+    - ~~Figuring this out took about 7 hours an ungodly amount of time.~~   
+  - ~~There wasn't a need to set the footer's position to absolute in the mobile platform, but it was absolutely (pun-intended) needed for the desktop platform due to said tag being outside of the rest of the content. Doing so removes the footer from the flow, which places (technically) it inside the main content.~~
+  #### 02/05/2022
+  Styled the desktop page (with a width of 1440) a bit more.
+   - After realising how little I know about positioning, proper box styling, and "legacy Layouts, I'm going to dive more into CSS fundamentals. 
 
-## The challenge
+   #### 03/15/2022
+   It's been well over a month of trying to figure out how to position certain objects (specifically centering the hero image) without the aid of table displays, legacy grids (such as 960), flexbox, and CSS grids. Obviously, it didn't pan out well. How did developers go about positioning just using floats and clears? 
+   - Decided to apply the table display to the hero image by wrapping it within two containers, allowing me to vertically center it without the need to lose hair about it. 
+   - Removed the border "guides" and completed the basic design for both mobile and desktop. 
+   - Added the gradient SVG background.
+     - Unsure if it should be a background image using CSS. With that, the SVG is awkward due to the pattern abruptly stopping. I need to learn how to use gradients with CSS. 
+     - Now I just need to apply Javascript.
 
-Your challenge is to build out this coming soon page and get it looking as close to the design as possible.
+  #### 03/23/2022
+  Applying a gradient transition was a bit tricky since CSS doesn't have a mehtodology to directly deal with that. As a result, and after some digging on the web, applying a transition to a gradient could only be achieved by transitioning an element's (and it's subsequent pseudo-element) opacity to what it was `::before`. The next step is to create an error message within the body (in contrast to the common alert function) using AJAX and Regex. Sure, it's much easier utilizing JQuery for something such as this, but I need to understand how to apply this knowing my code with confidence.
+  - changed `background-color` to `background-image` in order to utilize gradient transition.
+    - the button color would have changed abrutly without smooth animation if I were to use `background-color` instead.
+  - Created a `::before` pseudo-element for my `.btn` class in order to have both elements change color smoothly.
+  - changed CSS color values to RGB and RGBA due to HSL not supporting the specific color I needed for the button.
+  - Applying AJAX to both detect and inform the client if they made an error (invalid email) directly below the input field using a transitionary fade-in animation. The input's border should also transition with an equal speed and smoothness as the message and button. This border, message, and button, will disspear once it the client's email is validated, meaning that it'll make use of recognizing a wide variety of Regular Expressions. 
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-Your users should be able to:
+#### 05/09/2022
+After trying to understand the reason why all the elements within the form tag looked softer in contrast to the original Figma file, it occured to me (I should also give credit to Stackoverflow for assistance) that all the child selectors within the `<form>` tag had an opacity of .5, which naturally made every single element, even SVG files, susceptible to deviating away from their assigned color. To resolve this, removing the opacity property from the form selector and replacing the color value from RGB to RGBA for all child selectors removed te issue completely.
+&nbsp;&nbsp;&nbsp;&nbsp;I began adding the error shading, but I need to utilize Javascript to form CSS transitions based on Regex. As it turns out, this doesn't require AJAX.
+
+#### 05/10/2022
+Remember:
+- The regular border for `form.email` is `border: 1px solid rgba(206, 152, 152, .5);`
+  - Once an invalid address is entered, the border is `border: 2px solid rgb(249, 100, 100);`
+  - `icon-error` has a defaulted display of none, except when the address is invalid.
+- `margin-top` for `input.email--input` is set to -.5px if border is set to 2px; it will be -1px if border is 1px.
+- `margin-top` for `.btn` is set to -2px once border is set to 2px. -1px if border is 1px.
+
+#### 05/11/2022; 1556
+I tested out an algorithm that I found through doing some digging on Github. One of which was
+```js
+function init (){
+  submit.addEventListener('click', function() {
+    if(!reg.test(input.value.toLowerCase())){
+      formBorder.style.transition="all 1s ease"
+      formBorder.style.border = "2px solid rgb(249, 100, 100)";
+      iconError.style.transition = "color ease-in-out 1s"
+      iconError.style.display = "inline-block";
+      validityText.style.color = "rgb(249, 100, 100)";
+      validityText.style.transition = "ease 1s";
+      validityText.style.display = "inline-block";
+      validityText.innerHTML = "Please provide a valid email.";
+    } else{
+      formBorder.style.transition="all 1s ease"
+      formBorder.style.border = "1px solid green";
+      validityText.style.transition = "color ease-in-out 1s";
+      validityText.innerHTML = "Email Sent!";
+      validityText.style.color = "green";
+      iconError.style.display = "none";
+    }
+  })
+}
+init();
+```
+Of course, this code was partially edited to work for my page. The now resolved issue that stemmed from working hrough this was involving the HTML. Although the email input's border changed color and stroke, the page immediately reoladed, completely going back to it's default appearance. The issue started due to my use of a form tag, which is, what I now know, used to send and recieve data from a server. replacing `<form>` with a regular `<div>` tag worked solely for testing out if the code entered worked.  
+&nbsp;&nbsp;&nbsp;&nbsp;On another note, text transitions utilizing Javascript is much more cumbersome than it's seemingly worth. At least in the moment, it is.
+- remember to add a transformation for the div border. The color has a smooth transition, but the partial incrememnt in size just looks clunky.
+
+#### 05/12/2022; 1415
+I need to create a two functions – one for creating a smooth display transition for the icon-error, the other for a resize transition for border size and button's margin alteration. This project has taken a lot longer than I would have wanted it to go, but I guess it's a part of the learning process. I'm starting to appreciate the use of libraries and frameworks.
+
+#### 05/12/2022; 1833
+I'll go ahead and claim this project as completed, but only in terms of accomplishing all of the required tasks. I still intend to update this little page, but on my own terms. It was a tedious as it was educational and enjoyable, and I hope to have the next major update completed by next Thursday.
+
+
+## Overview
+
+### Project objectives
+
+There are a few challenges that I made for myself in the process of creating this branch:  
+- I'm a stubborn dude, and in order to understand CSS fundamentals, I'm gonna focus  
+on creating the layout by altering block positions using both floats and clears.  
+  - this excludes the use of flexbox and CSS grids. Although some may not see  
+  the point in taking these extra steps, this porject serves more as an experiment  
+  that'll allow me to better understand how programmers managed to configure layouts without the convenient newer technologies we have now.
+    - on a side note, I will ~not~ be using table grids...for now.
+- By confining myself to these restrictions, I'll better understand how to manipulate the DOM from various perspectives using Javascript.
+- This also serves as practice for better understanding git and virtual control systems as a whole.
+
+
+### The challenge
+
+Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Receive an error message when the `form` is submitted if:
   - The `input` field is empty
   - The email address is not formatted correctly
+- Recieve a success message when the email is entered correctly.
+  - Both messages should have a smooth transition. This includes a color change in the
+  `form` (which is now a `<div>` tag) border, and the display for the error-icon svg (CSS's tranisition property doesn't work for display, so I'll be using Javascript in conjuction with a hiiden CSS class).
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![Invalid email entered:](images/ver1.png)
+![Valid email entered:](images/ver2.png)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### Links
+I'll need to update this link once I have my website running.
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+## My process
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+Honestly, the progress log should suffice.
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+### Built with
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Semantic HTML5 markup
+- BEM CSS methodology
+- Javascript
+- Floats
+- positioning
+- Mobile-first workflow
 
-## Building your project
+### What I learned
+- The uber-tedious process of applying transition animations to buttons.
+- How delicate positioning elements was prior to the introduction of flexbox and grid.
+  - This forced me to use the now taboo table display set up.
+- How to manipulate CSS utilizing Javascript (Or more accurately, alter the DOM).
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
-
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
-
-## Deploying your project
-
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
-
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
-
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
-
-## Create a custom `README.md`
-
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
-
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
-
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
-
-## Submitting your solution
-
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+### Continued development
+Of course, this small project served as a demo for what would normally be an ecommerce website, which would require the use of APIs, and a decent amount of AJAX know-how. In addition to going further doewn the ES6 rabbit hole (and don't get me started on ES'22), bettering my understanding of CSS selectors and the application of pseudo-elements will aid me in becoming a more well-rounded developer. Full-stack develoer is beginning to sound more and more like a buzzword given how densely populated the learning stack is. Nonetheless, this'll be an interesting journey.
+ 
+## Author
+I'll elaborate social media details in later projects, but for now, call me Alex.
